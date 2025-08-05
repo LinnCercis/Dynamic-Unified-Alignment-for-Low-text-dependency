@@ -49,7 +49,7 @@ conda activate dual
 
 # Install dependencies
 pip install -r requirements.txt
-
+```
 ---
 
 ## Data
@@ -77,7 +77,7 @@ To train the model, run:
 ```bash
 # Clone the repository
 python train.py
-
+```
 ---
 
 ## Results
