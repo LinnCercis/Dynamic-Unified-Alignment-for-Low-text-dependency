@@ -75,7 +75,6 @@ DUAL consists of the following key components:
 To train the model, run:
 
 ```bash
-# Clone the repository
 python train.py
 ```
 ---
