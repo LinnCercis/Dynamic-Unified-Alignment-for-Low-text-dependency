@@ -10,8 +10,6 @@ This repository presents **DUAL (Dynamic Unified Alignment for Low-text dependen
 - [Setup & Dependencies](#setup-&-dependencies)  
 - [Usage Instructions](#usage-instructions)  
 - [Methodology](#methodology)  
-- [Traning](#traning)
-- [Results](#results)  
 - [Citation](#citation)  
 - [License](#license)  
 - [Contribution Guidelines](#contribution-guidelines)  
@@ -64,33 +62,95 @@ The dataset folder at /gpfsdswork/dataset/DUAL should have the following structu
 ```
 ---
 
-## Data
+## Code Information
 
-This project uses standard multimodal emotion recognition datasets such as IEMOCAP, MELD, or similar benchmarks. These datasets include aligned audio, video, and text modalities, supporting evaluation of DUAL in diverse emotional contexts.
-
----
-
-## Model Architecture
-DUAL consists of the following key components:
-
-- Audio and Visual Encoders: Extract modality-specific emotional features
-- Nonlinear Alignment: Combines features into a shared emotional space
-- SDM & VDM: Capture temporal differences in audio/visual emotion cues
-- Sentiment Residuals: Cross-modal projections to enhance fusion
-- Cross-Attention Decoder: Integrates text only at the decoding stage for refinement
-- Multi-part Loss: Combines classification, static, and dynamic alignment losses
+The repository contains the following core modules:
+- **Encoders**: Audio encoder and Visual encoder for modality-specific feature extraction
+- **Alignment**: Nonlinear fusion into a unified emotional space
+- **Differential Modules**: SDM (audio) and VDM (visual) for temporal dynamics
+- **Residual Mechanism**: Sentiment Residual (SR) for cross-modal enhancement
+- **Decoder**: Cross-attention with text integration at the final stage
+- **Loss Functions**: Combination of classification, static alignment, and dynamic alignment losses
 
 ---
 
-## Training
+## Setup & Dependencies
+**Environment Setup**
 
-To train the model, run:
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/dual-emotion-recognition
+cd dual-emotion-recognition
+
+# Create and activate environment
+conda create -y --name dual python=3.9
+conda activate dual
+
+# Install dependencies
+pip install -r requirements.txt
+```
+**Requirements**
+- Python 3.9
+- PyTorch >= 1.10
+- Transformers (Hugging Face)
+- OpenCV
+- librosa
+- NumPy, SciPy, scikit-learn
+- tqdm
+
+---
+
+## Usage Instructions
+**Train the model**
 
 ```bash
 python train.py
 ```
+**Evaluate the model**
+
+```bash
+python evaluate.py
+```
+**Inference on new model**
+
+```bash
+python inference.py --input path_to_input_data
+```
 ---
 
-## Results
+## Usage Instructions
 
-DUAL achieves competitive performance on multiple benchmarks, especially under low-text or noisy-text conditions. Detailed metrics and ablation studies are available in the results/ directory.
+The DUAL framework follows these steps:
+1. **Feature Extraction**
+- Extract audio embeddings (e.g., using CNNs or wav2vec-based models).
+- Extract visual embeddings (e.g., with ResNet or Vision Transformer).
+- Text embeddings are encoded only at the final decoding stage.
+2. **Nonlinear Alignment**
+- Audio and visual features are projected into a unified emotional latent space.
+3. **Differential Modeling**
+- SDM and VDM capture temporal differences and emotional dynamics.
+4. **Residual Enhancement**
+- Sentiment Residual (SR) introduces cross-modal residual projections for complementarity.
+5. **Cross-Attention Decoding**
+- Text is introduced only at the decoding phase, refining predictions with minimal reliance.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+
+
+## Contribution Guidelines
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch (git checkout -b feature-name)
+3. Commit your changes (git commit -m 'Add feature')
+4. Push to your branch (git push origin feature-name)
+5. Submit a Pull Request
+
+---
