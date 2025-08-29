@@ -5,16 +5,16 @@ This repository presents **DUAL (Dynamic Unified Alignment for Low-text dependen
 
 - [Introduction](#introduction)  
 - [Project Goals](#project-goals)  
-- [Dataset Information](#dataset information)  
-- [Code Information](#code information)  
-- [Setup & Dependencies](#setup & dependencies)  
-- [Usage Instructions](#usage instructions)  
+- [Dataset Information](#dataset-information)  
+- [Code Information](#code-information)  
+- [Setup & Dependencies](#setup-&-dependencies)  
+- [Usage Instructions](#usage-instructions)  
 - [Methodology](#methodology)  
 - [Traning](#traning)
 - [Results](#results)  
 - [Citation](#citation)  
 - [License](#license)  
-- [Contribution Guidelines](#contribution guidelines)  
+- [Contribution Guidelines](#contribution-guidelines)  
 
 ---
 
@@ -41,8 +41,11 @@ This approach ensures higher robustness and adaptability in real-world applicati
 
 ## Dataset Information
 Please download the following datasets into a folder, e.g. /gpfsdswork/dataset/DUAL and unzip:
-IEMOCAP dataset (audio, visual, and text dialogues, ~12 GB) from the [IEMOCAP official website].
-MELD dataset (multimodal multi-party dialogues with emotion annotations, ~2 GB) from the [MELD official website].
+
+IEMOCAP dataset (audio, visual, and text dialogues, ~12 GB) from the [[IEMOCAP official website](https://sail.usc.edu/iemocap/?utm_source=chatgpt.com)].
+
+MELD dataset (multimodal multi-party dialogues with emotion annotations, ~2 GB) from the [[MELD official website](https://affective-meld.github.io/?utm_source=chatgpt.com)].
+
 (Optional) Other multimodal benchmarks (aligned audio-visual-text datasets) depending on your experiment setup.
 The dataset folder at /gpfsdswork/dataset/DUAL should have the following structure:
 
