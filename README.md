@@ -17,7 +17,7 @@ This repository presents **DUAL (Dynamic Unified Alignment for Low-text dependen
 ---
 
 ## Introduction
-
+![示例图](DUAL.jpg)
 **DUAL** is designed to improve **multimodal emotion recognition** by reducing reliance on textual input and exploiting the rich **emotional cues** inherent in audio and visual modalities.
 Key innovations include:
 - **Sentiment Differential Module (SDM)**: captures temporal differences in audio signals.
